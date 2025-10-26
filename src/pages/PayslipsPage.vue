@@ -38,7 +38,7 @@
       </div>
     </div>
     <!-- Table -->
-    <div class="bg-white border border-border rounded-b-lg overflow-visible">
+    <div class="bg-white border border-border rounded-b-lg overflow-x-auto overflow-y-visible max-w-full">
       <table class="w-full text-sm">
         <thead class="bg-transparent text-dark-blue text-sm">
           <tr>
@@ -127,7 +127,7 @@
               leave-to-class="-translate-y-2 opacity-0"
             >
               <tr v-if="expanded === index" class="bg-bg-2 border-t border-border">
-                <td colspan="7" class="p-4">
+                <td colspan="7">
                   <PdfViewer :src="srcPath(payslip)" />
                 </td>
               </tr>
@@ -151,8 +151,8 @@
       v-if="isModalOpen"
       class="fixed inset-0 z-50 flex items-center justify-center bg-black/50"
     >
-      <div class="bg-white rounded-2xl w-[90%] shadow-xl overflow-hidden">
-        <div class="px-6 pt-5">
+      <div class="bg-white rounded-2xl w-[100%] h-[100%] shadow-xl overflow-hidden flex flex-col">
+        <div class="px-6 pt-5 shrink-0">
           <div class="flex items-center justify-between">
             <div class="flex items-center gap-4">
               <div class="text-navy-light text-sm whitespace-nowrap mt-1">Mercans USA Ltd.</div>
@@ -172,8 +172,8 @@
           </div>
           <div class="mt-4 border-b border-border"></div>
         </div>
-        <div class="p-6">
-          <div class="h-[520px] flex items-center justify-center text-navy-light italic border border-dashed rounded-lg">
+        <div class="flex-1 p-6 overflow-auto">
+          <div class="h-full flex items-center justify-center text-navy-light italic border border-dashed rounded-lg">
             <img src="/src/assets/logos/no_design.svg" alt="Salary Evolution Chart" class="max-h-full max-w-full"/>
           </div>
         </div>
