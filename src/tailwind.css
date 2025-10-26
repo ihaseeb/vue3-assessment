@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+@import "./styles/design-tokens.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-bg text-fg;
+  }
+}
+
+@layer components {
+  .v-popper--theme-tooltip {
+    @apply !bg-navy-dark !text-white text-[12px] font-normal !px-2 !py-1 !rounded !shadow;
+  }
+}
